@@ -1,0 +1,53 @@
+[
+    {
+      "name": "John Doe",
+      "lastMessage": "Hey, how's it going?",
+      "imageUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"
+    },
+    {
+      "name": "Jane Smith",
+      "lastMessage": "See you soon!",
+      "imageUrl": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e"
+    },
+    {
+      "name": "Alice Johnson",
+      "lastMessage": "Can we reschedule?",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+    },
+    {
+      "name": "Bob Brown",
+      "lastMessage": "Got it, thanks!",
+      "imageUrl": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61"
+    },
+    {
+      "name": "Charlie Davis",
+      "lastMessage": "I'm on my way.",
+      "imageUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9"
+    },
+    {
+      "name": "Diana Evans",
+      "lastMessage": "Looking forward to it!",
+      "imageUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb"
+    },
+    {
+      "name": "Edward Fisher",
+      "lastMessage": "Meeting at 3 PM.",
+      "imageUrl": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61"
+    },
+    {
+      "name": "Fiona Green",
+      "lastMessage": "Thanks for the update.",
+      "imageUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d"
+    },
+    {
+      "name": "George Harris",
+      "lastMessage": "Sounds good!",
+      "imageUrl": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df"
+    },
+    {
+      "name": "Hannah Ingram",
+      "lastMessage": "Call me when you're free.",
+      "imageUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2"
+    }
+  ]
+  
