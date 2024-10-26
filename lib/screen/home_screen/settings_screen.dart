@@ -7,7 +7,10 @@ class SettingsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: [
-        _buildAppBar(),
+        Padding(
+          padding: const EdgeInsets.only(top: 5),
+          child: _buildAppBar(),
+        ),
         const Divider(height: 0.3, thickness: 0.4),
         _profileTile(),
         const Divider(height: 0.2, thickness: 0.4),
