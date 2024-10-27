@@ -8,12 +8,40 @@ class ChatProvider with ChangeNotifier {
 
   List<User> _users = [];
 
-  List<User> get users => _users;
+  List<User> _filteredUsers = [];
+
+  final List<String> _chips = ["All", "Unread", "Favourites", "Groups"];
+
+  String _selectedChip = "All";
+
+  List<User> get users => _filteredUsers.isNotEmpty ? _filteredUsers : _users;
+
+  String get selectedChip => _selectedChip;
+
+  List<String> get chips => _chips;
 
   @override
   void dispose() {
     _isActive = false;
     super.dispose();
+  }
+
+  void setSelectedChip(String chip) {
+    _selectedChip = chip;
+    if (_isActive) {
+      notifyListeners();
+    }
+  }
+
+  void searchUsers(String query) {
+    if (query.isEmpty) {
+      _filteredUsers = [];
+    } else {
+      _filteredUsers = _users.where((user) {
+        return user.name.toLowerCase().contains(query.toLowerCase());
+      }).toList();
+    }
+    notifyListeners();
   }
 
   Future<void> loadUsers() async {

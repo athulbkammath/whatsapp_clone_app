@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:whatsapp_clone_app/provider/chat_provider.dart';
 import 'package:whatsapp_clone_app/provider/home_provider.dart';
-import 'chat_list_screen.dart';
+import 'chat_list_screen/chat_list_screen.dart';
 import 'settings_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -15,18 +15,20 @@ class HomeScreen extends StatefulWidget {
 class HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Selector<HomeProvider, int>(
-      selector: (_, provider) => provider.tabCount,
-      builder: (_, tabCount, child) => Selector<HomeProvider, int>(
-        selector: (_, provider) => provider.selectedIndex,
-        builder: (_, selectedIndex, child) => Scaffold(
-          body: _tabBody(selectedIndex),
-          bottomNavigationBar: _bottomNavigationBar(tabCount, selectedIndex),
-          floatingActionButton: Selector<HomeProvider, int>(
-              selector: (_, provider) => provider.selectedIndex,
-              builder: (_, selectedIndex, child) {
-                return _floatingActionButton(selectedIndex);
-              }),
+    return Scaffold(
+      body: Selector<HomeProvider, int>(
+        selector: (_, provider) => provider.tabCount,
+        builder: (_, tabCount, child) => Selector<HomeProvider, int>(
+          selector: (_, provider) => provider.selectedIndex,
+          builder: (_, selectedIndex, child) => Scaffold(
+            body: _tabBody(selectedIndex),
+            bottomNavigationBar: _bottomNavigationBar(tabCount, selectedIndex),
+            floatingActionButton: Selector<HomeProvider, int>(
+                selector: (_, provider) => provider.selectedIndex,
+                builder: (_, selectedIndex, child) {
+                  return _floatingActionButton(selectedIndex);
+                }),
+          ),
         ),
       ),
     );

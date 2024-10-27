@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../model/user.dart';
-import '../chat_detail_screen.dart';
+import '../../../model/user.dart';
+import '../../chat_detail_screen.dart';
 
 class ChatListTile extends StatelessWidget {
   final User user;
